@@ -1,15 +1,16 @@
-<h1>Users#show</h1>
-<h1><%= @user.full_name %></h1>
+<h1>Patient</h1>
+<h1><%= @user.first_name %></h1>
+<h1><%= @user.last_name %></h1>
 <hr />
 <h2>Doctors</h2>
 <ul>
   <% @user.doctors.each do |doctor| %>
     <li>
-      <%= link_to doctor.name, docotor %>
+      <%= link_to doctor.name, doctor %>
     </li>
   <% end %>
 </ul>
 <br />
 <br />
 <br />
-<%= link_to 'Delete User', @user, method: :delete, class: "ui red button inverted" %>
+<%= link_to 'Delete Patient', @user, method: :delete, class: "ui red button inverted" %>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'courses#index'
+  root 'doctors#index'
 
   resources :users
-  resources :courses do
+  resources :doctors do
   resources :appointments, only: [:index, :new, :create, :destroy]
   end
 end
